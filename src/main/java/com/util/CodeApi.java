@@ -11,7 +11,7 @@ import java.io.IOException;
 public class CodeApi {
 
     /**
-     * 通过base64验证码 上传超级鹰解析图片
+     * 通过base64验证码 上传超级鹰解析图片1
      * @param base64Image
      * @return
      */
