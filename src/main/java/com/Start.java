@@ -4,6 +4,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -26,7 +28,6 @@ public class Start {
  
 	}
 	static Logger logger = Logger.getLogger(Start.class);
-
 	public static void main(String[] args) {
 		logger.info("服务开始启动");
 		try {

@@ -1,0 +1,15 @@
+/*用户cookie表*/
+DROP TABLE IF EXISTS `user_cookie`;
+CREATE TABLE `user_cookie` (
+ `id` CHAR(32) NOT NULL COMMENT '主键',
+ `user_id` VARCHAR(20) DEFAULT NULL COMMENT '用户id对应s_student表',
+ `name` VARCHAR(20) DEFAULT NULL COMMENT 'cookie名称',
+ `value` VARCHAR(100) DEFAULT NULL COMMENT '值',
+ `domain` VARCHAR(100) NOT NULL COMMENT '域',
+ `path` VARCHAR(100) DEFAULT NULL COMMENT '路径',
+ `expiry` DATETIME DEFAULT NULL COMMENT '过期时间',
+ `isSecure` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '是否安全通道 0：否，1：是，默认为 0',
+ `isHttpOnly` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '是否允许js获取cookie 0：否，1：是，默认为 0',
+ `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+ PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
